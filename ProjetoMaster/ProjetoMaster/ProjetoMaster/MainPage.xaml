@@ -4,15 +4,17 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ProjetoMaster.MainPage">
+             x:Class="ProjetoMaster.MainPage"
+                  IsPresented="True">
     <MasterDetailPage.Master>
         <ContentPage Title="Classificação">
             <ListView x:Name="ListView" SeparatorColor="Blue"
-                      ItemSelected="listview_ItemSelected">
+                      ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding descricao}"
-                                  Detail="{Binding valor}"
+                        <TextCell 
+                            Text="{Binding nome}"
+                                  Detail="{Binding descricao}"
                                   TextColor="Black"
                                   DetailColor="Black"/>
 
